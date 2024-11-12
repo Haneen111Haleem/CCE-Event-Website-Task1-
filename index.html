@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCE Event Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Welcome to CCE Annual Event!</h1>
+      <p>
+        Join us for an unforgettable event filled with innovation,</br> networking,
+        and technology showcases.
+      </p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Event Details Section -->
+      <section class="event-details">
+        <h2>About the Event</h2>
+        <p>
+          Our Annual Event brings the whole department together to share the latest in technology trends
+          and ideas. Whether you're here to learn, network, or showcase, there's
+          something for everyone!
+        </p>
+      </section>
+
+      <!-- Registration Form Section -->
+      <section class="form-section">
+        <h2>Register for the Event</h2>
+        <form id="registrationForm" action="/register" method="POST">
+             <!--title-->
+          <label for="name">Name</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="name">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="preferences">Event Preferences</label>
+          <select id="preferences" name="preferences">
+            <option value="workshops">Workshops</option>
+            <option value="networking">Networking Sessions</option>
+            <option value="speakers">General knowledge</option>
+          </select>
+
+          <label>Note (if you have)</label>
+          <input type="text" name="note" />
+
+            <button type="submit" onclick="registerSuccess()">Register</button>
+
+        </form>
+      </section>
+
+      <!-- Login Form Section -->
+      <section class="form-section">
+        <!--title-->
+        <h2>Login to Update Preferences</h2>
+        <form id="loginForm" action="/login" method="POST">
+             <!--items-->
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" name="username" required />
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" required />
+
+          <label for="updatePreferences">Update Preferences</label>
+          <select id="updatePreferences" name="preferences">
+            <option value="workshops">Workshops</option>
+            <option value="networking">Networking Sessions</option>
+            <option value="speakers">General knowledge</option>
+          </select>
+
+          <label>Note (if you have)</label>
+          <input type="text" name="note" />
+
+          <button type="submit" onclick="loginSuccess()">Login</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>© CCE Annual Event. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+<script>
+    //onclick event for register
+    function registerSuccess() {
+      alert("Registered successfully!");
+    }
+    //onclick event for login
+    function registerSuccess() {
+      alert("Logined successfully!");
+    }
+  </script>
+  
